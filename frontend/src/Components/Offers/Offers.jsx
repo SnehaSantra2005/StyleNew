@@ -21,22 +21,7 @@ const Offers = () => {
         <div></div>
       </div>
 
-      <div className="trendy">
 
-        <h1>TRENDIEST CATEGORIES</h1>
-        <hr />
-        <div className='section'>
-          <div className="section1">
-            <div className='box'><img src={trendy5} className='lipstick' /></div>
-            <div className='box'><img src={trendy4} className='lipsticshade' /></div>
-
-            <div className='box'><img src={trendy3} className='lipstickgirl' /></div>
-            <div className='box'><img src={trendy2} className='lipsticvit' /></div>
-
-          </div>
-
-        </div>
-      </div>
 
     </>
   );

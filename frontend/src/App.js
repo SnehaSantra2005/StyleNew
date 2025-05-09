@@ -12,7 +12,8 @@ import SkinCare_banner from "./Components/Assets/banner_SkinCare.png";
 import LoginSignup from "./Pages/LoginSignup";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
-
+import CategoryShowcase from './Components/CategoryShowcase/CategoryShowcase'; // Import category showcase component
+import CategoryPage from './Pages/CategoryPage'; // Import category page
 export const backend_url = 'http://localhost:5000';
 export const currency = '₹';
 
@@ -28,6 +29,9 @@ function App() {
           <Route path="/womens" element={<ShopCategory banner={women_banner} category="women" />} />
           <Route path="/kids" element={<ShopCategory banner={kid_banner} category="kid" />} />
           <Route path="/SkinCare" element={<ShopCategory banner={SkinCare_banner} category="SkinCare" />} />
+
+
+
           <Route path='/about' element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path='/product' element={<Product />}>
@@ -36,6 +40,9 @@ function App() {
           </Route>
           <Route path="/cart" element={<Cart />} />
           <Route path="/login" element={<LoginSignup />} />
+          <Route path="/" element={<CategoryShowcase />} />
+          {/* Dynamic category route */}
+          <Route path="/category/:categoryName" element={<CategoryPage />} />
         </Routes>
         <Footer />
       </Router>

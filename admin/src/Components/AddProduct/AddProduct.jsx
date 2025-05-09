@@ -55,6 +55,8 @@ const AddProduct = () => {
 
   return (
     <div className="addproduct">
+      category: req.body.category.toLowerCase(),
+
       <div className="addproduct-itemfield">
         <p>Product title</p>
         <input type="text" name="name" value={productDetails.name} onChange={(e) => { changeHandler(e) }} placeholder="Type here" />
@@ -80,6 +82,13 @@ const AddProduct = () => {
           <option value="men">Men</option>
           <option value="kid">Kid</option>
           <option value="SkinCare">SkinCare</option>
+          <option value="Indianware">Indianware</option>
+          <option value="Westernwear">Westernwear</option>
+          <option value="Footwear">Footwear</option>
+          <option value="Lingerie">Lingerie</option>
+          <option value="Bags">Bags</option>
+          <option value="Jewellery">Jewellery</option>
+          <option value="Sunglasses">Sunglasses</option>
         </select>
       </div>
       <div className="addproduct-itemfield">

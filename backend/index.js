@@ -167,6 +167,11 @@ app.get("/SkinCare", async (req, res) => {
   res.send(arr);
 });
 
+
+
+
+
+
 // endpoint for getting womens products data
 app.get("/popularinwomen", async (req, res) => {
   let products = await Product.find({ category: "women" });
@@ -253,3 +258,25 @@ app.listen(port, (error) => {
   if (!error) console.log("Server Running on port " + port);
   else console.log("Error : ", error);
 });
+
+// Endpoint for getting products by category name (dynamic)
+app.get("/category/:categoryName", async (req, res) => {
+  const categoryName = req.params.categoryName.toLowerCase();
+
+  try {
+    const products = await Product.find({
+      category: { $regex: new RegExp(`^${categoryName}$`, 'i') }
+    }).exec(); // optional, explicitly returns a Promise
+
+    if (!products.length) {
+      return res.status(404).json({ message: "No products found in this category" });
+    }
+
+    console.log("Category:", categoryName);
+    res.status(200).json(products);
+  } catch (error) {
+    console.error("Error fetching category products:", error);
+    res.status(500).json({ message: "Internal Server Error" });
+  }
+});
+

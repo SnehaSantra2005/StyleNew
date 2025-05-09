@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-
+import { Link } from 'react-router-dom'
 import footer_logo from '../Assets/logo5.png'
 import instagram_icon from '../Assets/instagram_icon.png'
 import pintrest_icon from '../Assets/pintester_icon.png'
@@ -22,13 +22,13 @@ const Footer = () => {
       </ul>
       <div className="footer-social-icons">
         <div className="footer-icons-container">
-          <img src={instagram_icon} alt="" />
+          <Link to="https://www.instagram.com/hi_itz_snehaa"><img src={instagram_icon} alt="" /></Link>
         </div>
         <div className="footer-icons-container">
           <img src={pintrest_icon} alt="" />
         </div>
         <div className="footer-icons-container">
-          <img src={whatsapp_icon} alt="" />
+          <Link to="https://www.whatsapp.com/8100851911"><img src={whatsapp_icon} alt="" /></Link>
         </div>
       </div>
       <div className="footer-copyright">

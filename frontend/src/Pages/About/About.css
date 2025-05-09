@@ -1,22 +1,143 @@
-.about-page {
-  padding: 20px;
-  background-color: #67dbff;
-  text-align: center;
-  border-radius: 10px;
-  width: 1200px;
-  margin-left: 150px;
-  margin-top: 50px;
+.section2 {
+  width: 100%;
+  min-height: 80vh;
+  background-color: #e8f7f9;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-.about-page h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+.container1 {
+  width: 80%;
+  display: block;
+  margin: auto;
+  padding-top: 100px;
+}
+
+.content-section2 {
+  float: left;
+  width: 55%;
 
 }
 
-.about-page p {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #333;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+.image-section2 {
+  float: right;
+  width: 40%;
+}
+
+.image-section2 img {
+  width: 400px;
+
+  height: 370px;
+}
+
+.content-section2 .title {
+  text-transform: uppercase;
+  font-size: 28px;
+
+
+}
+
+.content1 h3 {
+  margin-top: 20px;
+  color: #5d5d5d;
+  font-size: 21px;
+}
+
+.content1 p {
+  margin-top: 10px;
+  font-family: sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.button2 button {
+  background-color: #3d3d3d;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 25px;
+  letter-spacing: 1.5px;
+  margin-top: 20px;
+}
+
+.button2 button:hover {
+  background-color: #a52a2a;
+  color: #fff;
+}
+
+.content-section2 .social {
+  margin-top: 40px;
+
+
+}
+
+.content-section2 .social img {
+  color: #a52a2a;
+  font-size: 30px;
+  padding: 0px 10px;
+  transition: transform 0.3s ease;
+}
+
+.social img:hover {
+  color: #3d3d3d;
+  transform: scale(1.1);
+}
+
+@media screen and (max-width:768px) {
+  .section2 {
+    width: 100%;
+    min-height: 135vh;
+    background-color: #e8f7f9;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+
+  .container1 {
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 50px;
+  }
+
+  .content-section2 {
+    float: none;
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+
+  .image-section2 {
+    float: left;
+    width: 100%;
+  }
+
+  .image-section2 img {
+    width: 400px;
+    height: 370px;
+    display: block;
+    margin: auto;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 19px;
+  }
+
+  .button2 button {
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .content-section2 .social {
+    text-align: center;
+
+
+  }
 }

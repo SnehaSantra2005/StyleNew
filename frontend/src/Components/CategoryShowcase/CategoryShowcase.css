@@ -1,0 +1,43 @@
+.category-showcase {
+    padding: 2rem;
+    text-align: center;
+    background: #fdfdfd;
+}
+
+.category-showcase h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.category-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.category-card {
+    width: 160px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.category-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}
+
+.category-card p {
+    margin-top: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #444;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
