@@ -102,34 +102,79 @@
     font-size: 15px;
     font-weight: 500;
 }
-
+/* Tablets (width between 601px and 1024px) */
 @media (max-width: 1024px) and (min-width: 601px) {
-    .loginsignup {
-        flex-direction: column;
-        height: auto;
-        padding-top: 50px;
-    }
+  .loginsignup {
+    flex-direction: column;
+    height: auto;
+    padding: 60px 20px 40px 20px;
+    margin: 5% auto;
+    width: 90%;
+  }
 
-    .loginsignup-girl {
-        width: 70%;
-        margin: 0 auto;
-        margin-top: 20px;
-        display: block;
-        text-align: center;
-    }
+  .loginsignup-girl {
+    width: 80%;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
 
-    .loginsignup-container {
-        width: 90%;
-        max-width: 600px;
-        margin: 20px auto 0 auto;
-        padding: 20px 30px;
-    }
+  .loginsignup-container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 90%;
+  }
 
-    .loginsignup-fields input {
-        font-size: 17px;
-    }
+  .loginsignup-fields input {
+    font-size: 16px;
+  }
 
-    .loginsignup-container button {
-        font-size: 20px;
-    }
+  .loginsignup-container button {
+    font-size: 18px;
+  }
+}
+
+/* Mobile Devices (width 600px and below) */
+@media (max-width: 1024px) {
+  .loginsignup {
+    flex-direction: column;
+    height: 450px;
+    padding: 60px 20px 40px 20px;
+    margin: 5% auto;
+    width: 80%;
+    background: linear-gradient(rgba(255, 179, 250, 0.8), rgba(249, 233, 246, 0.9)),
+                url('../girl.svg') no-repeat center;
+    background-size: 450px ;
+    background-position: center;
+  }
+
+  .loginsignup-girl {
+    display: none;
+  }
+
+  .loginsignup-container {
+    margin: 0 auto;
+    padding: 30px 20px;
+    background:none;
+    border-radius: 20px;
+    margin-top: -70px;
+  }
+
+  .loginsignup-fields input {
+    font-size: 16px;
+  }
+
+  .loginsignup-container button {
+    font-size: 18px;
+  }
+
+  .loginsignup-login {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .loginsignup-agree {
+    font-size: 13px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
 }

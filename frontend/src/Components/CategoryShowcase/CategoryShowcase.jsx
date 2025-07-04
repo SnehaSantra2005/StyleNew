@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import './CategoryShowcase.css';
-import { useNavigate } from 'react-router-dom'; // ✅ Import navigate hook
 import { Link } from 'react-router-dom';
+
 import indianwearImg from '../Assets/IndianWare.png';
 import westernwearImg from '../Assets/westernwear.png';
 import FootwearImg from '../Assets/footwear.png';
@@ -11,39 +11,52 @@ import BagsImg from '../Assets/Bags1.png';
 import SunglassesImg from '../Assets/Sunglasses.png';
 
 const categories = [
-    { name: 'Indianwear', img: indianwearImg, path: '/category/Indianware' },
-    { name: 'Westernwear', img: westernwearImg, path: '/category/westernwear' },
-    { name: 'Footwear', img: FootwearImg, path: '/category/footwear' },
-    { name: 'Lingerie', img: LingerieImg, path: '/category/lingerie' },
-    { name: 'Jewellery', img: JewelleryImg, path: '/category/jewellery' },
-    { name: 'Bags', img: BagsImg, path: 'category/bags' },
-    { name: 'Sunglasses', img: SunglassesImg, path: '/category/sunglasses' },
+  { name: 'Indianwear', img: indianwearImg, path: '/category/indianwear' },
+  { name: 'Westernwear', img: westernwearImg, path: '/category/westernwear' },
+  { name: 'Footwear', img: FootwearImg, path: '/category/footwear' },
+  { name: 'Lingerie', img: LingerieImg, path: '/category/lingerie' },
+  { name: 'Jewellery', img: JewelleryImg, path: '/category/jewellery' },
+  { name: 'Bags', img: BagsImg, path: '/category/bags' },
+  { name: 'Sunglasses', img: SunglassesImg, path: '/category/sunglasses' },
 ];
 
 const CategoryShowcase = () => {
-    const navigate = useNavigate(); // ✅ Hook for navigation
+  const scrollRef = useRef(null);
 
-    return (
-        <div className="category-showcase">
+  useEffect(() => {
+    const container = scrollRef.current;
+    let direction = 1;
 
-            <div className="category-cards">
-                {categories.map((cat, index) => (
-                    <Link to={cat.path}
-                        key={index}
-                        className="category-card"
-                        onClick={() => navigate(cat.path)}
-                        style={{ cursor: 'pointer' }}
-                    >
-                        <img src={cat.img} alt={cat.name} />
-                        <p>{cat.name}</p>
-                    </Link>
+    const isMobile = window.innerWidth < 768;
+    if (!isMobile) return;
 
-                ))}
+    const scrollInterval = setInterval(() => {
+      if (!container) return;
+      container.scrollLeft += 1.5 * direction;
 
-            </div>
-        </div>
+      if (container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+        direction = -1;
+      } else if (container.scrollLeft <= 0) {
+        direction = 1;
+      }
+    }, 20);
 
-    );
+    return () => clearInterval(scrollInterval);
+  }, []);
+
+  return (
+    <section className="category-showcase">
+      <h2 className="category-title">Shop by Category</h2>
+      <div className="category-cards" ref={scrollRef}>
+        {categories.map((cat, index) => (
+          <Link to={cat.path} key={index} className="category-card">
+            <img src={cat.img} alt={cat.name} loading="lazy" />
+            <p>{cat.name}</p>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
 };
 
 export default CategoryShowcase;

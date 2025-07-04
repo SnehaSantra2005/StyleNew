@@ -4,6 +4,7 @@ import './NewsLetter.css'
 const NewsLetter = () => {
   return (
     <div className='newsletter'>
+      <div className="offer-tooltip">🎁 Exclusive Offer!</div>
       <h1>Get Exclusive Offers On Your Email</h1>
       <p>Subscribe to our newsletter and stay updated.</p>
       <div>

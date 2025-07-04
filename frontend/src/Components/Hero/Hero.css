@@ -1,5 +1,5 @@
 .hero {
-    width: 100%;
+    width: 110%;
     height: 90vh;
     display: flex;
     align-items: center;
@@ -8,6 +8,9 @@
     padding: 20px;
     box-sizing: border-box;
     margin-top: -70px;
+    margin-left: -60px;
+    object-fit: cover;
+
 }
 
 .hero-right {
@@ -67,5 +70,35 @@
         width: 100%;
         max-width: 100%;
         border-radius: 10px;
+        margin-left: 50px;
     }
+}
+
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px;
+    flex-direction: column;
+    
+  }
+
+  .hero-right img {
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin-top: 50px;
+    
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 15px;
+
+  }
+
+  .hero-right img {
+    border-radius: 12px;
+  }
 }

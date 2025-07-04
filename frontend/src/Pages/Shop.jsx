@@ -55,7 +55,7 @@ const Shop = () => {
         />
       </div>
       <Hero />
-
+      
 
       <CategoryShowcase />
       <Popular data={filterProducts(popular)} />

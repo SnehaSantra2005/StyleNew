@@ -132,7 +132,7 @@
     }
 
     .shopcategory1-filters {
-        width: 250px;
+        width: 150px;
         background: white;
         padding: 20px;
         border-radius: 16px;
@@ -141,6 +141,18 @@
         top: 20px;
         flex-shrink: 0;
         height: 300px;
+    }
+
+    .shopcategory1-products {
+        margin-top: -360px;
+        margin-left: 200px;
+    }
+
+    .shopcategory1-loadmore {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-top: 30px;
+        margin-left: 180px;
     }
 
 

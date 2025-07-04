@@ -17,6 +17,7 @@ const NewCollections = (props) => {
         </div>
 
       </div>
+
     </>
   )
 }

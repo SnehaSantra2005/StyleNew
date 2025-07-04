@@ -8,16 +8,22 @@
 }
 
 .skinCare h1 {
-    color: #171717;
-    font-size: 40px;
-    font-weight: 600;
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    color: #d63384;
+    /* Glam pink */
+    margin-bottom: 0px;
+    font-family: 'Segoe UI', sans-serif;
+    animation: fadeInDown 0.8s ease-out;
+    position: relative;
 }
 
 .skinCare hr {
     width: 150px;
     height: 4px;
     border-radius: 10px;
-    background: #252525;
+    background: #d63384;
 }
 
 .skinCare-item {

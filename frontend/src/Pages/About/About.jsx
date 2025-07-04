@@ -1,41 +1,113 @@
 import React from 'react';
 import './About.css';
-import sneha from './sneha4.png';
-import { Link } from 'react-router-dom'
-import instagram_icon from './instagram_icon.png'
-import pintrest_icon from './pintester_icon.png'
-import whatsapp_icon from './whatsapp_icon.png'
+import journey1 from './journey1.png'; // Startup phase image
+import journey2 from './journey2.png'; // Growth or milestone image
+import journey3 from './journey3.png'; // Present or future vision image
+import { Link } from 'react-router-dom';
+import instagram_icon from './instagram.gif';
+import pinterest_icon from './pinterest.gif';
+import whatsapp_icon from './whatsapp_icon.gif';
+import facebook_icon from './facebook_icon.gif';
+import linkedin_icon from './linkedin.gif';
+import telegram_icon from './telegram_icon.gif';
+import email_icon from './email.gif';
+import profile from './sneha5.png';
+
+
 const About = () => {
   return (
+    <section className="journey-section">
+      <div className="journey-heading">
+        <h1>Our Journey</h1>
+        <p>How StyleNew became a movement, not just a brand.</p>
+      </div>
 
-    <div className='section2'>
-      <div className='container1'>
-        <div className='content-section2'>
-          <div className='title'>
-            <h1>About Us</h1>
-          </div>
-          <div className='content1'>
-            <h3>
-              Welcome to StyleNew — where trends are born, not followed.
-            </h3>
+      <div className="timeline-container">
+
+        <div className="timeline-block left">
+          <img src={journey1} alt="The Beginning" />
+          <div className="timeline-content">
+            <h2>✨ It all started in 2025</h2>
             <p>
-              Our journey started in 2025, and we have been growing ever since, thanks to our loyal customers.We’re more than a fashion site; we’re a style movement. Curated for the bold, the curious, and the effortlessly cool, our collections blend runway energy with street-smart edge. Think of us as your digital closet upgrade — always fresh, always forward. At StyleNew, it’s not just what you wear, it’s how you own it.
+              StyleNew was born from a passion for individuality and expression. 
+              What started as a small idea in a bedroom became a dream to empower 
+              people through fashion. We believed that style shouldn’t follow rules — it should write them.
             </p>
-            <div className="button2">
-              <button >Read More</button>
-            </div>
-          </div>
-          < div className="social">
-            <Link to="https://www.instagram.com/hi_itz_snehaa"><img className='social1' src={instagram_icon} alt="" /></Link>
-            <img className='social1' src={pintrest_icon} alt="" />
-            <Link to="https://www.whatsapp.com/8100851911"><img className='social1' src={whatsapp_icon} alt="" /></Link>
           </div>
         </div>
-        <div className="image-section2">
-          <img src={sneha} alt='sneha' />
+
+        <div className="timeline-block right">
+          <img src={journey2} alt="Milestones" />
+          <div className="timeline-content">
+            <h2>🚀 Growth & Grit</h2>
+            <p>
+              With every product drop, our community grew stronger. 
+              We embraced real stories, bold designs, and a fearless voice. 
+              From curated beauty to bold statements — we became a brand people wear with pride.
+            </p>
+          </div>
+        </div>
+
+        <div className="timeline-block left">
+          <img src={journey3} alt="Vision for future" />
+          <div className="timeline-content">
+            <h2>🌟 What’s Next</h2>
+            <p>
+              We're building something beyond trends — a digital destination for confidence, creativity, and self-love. 
+              StyleNew is evolving every day, and so are you. Let’s grow together, one look at a time.
+            </p>
+          </div>
         </div>
       </div>
+
+      <div className="founder-section">
+  <h2>Meet the Founder</h2>
+  <div className="founder-container">
+    <img src={profile} alt="Sneha Santra" className="founder-image" />
+    <div className="founder-bio">
+      <h3>Sneha Santra</h3>
+      <p>
+        I'm a passionate tech enthusiast and creative mind behind StyleNew. Currently pursuing my B.Tech in Computer Science,
+        I blend design with development to bring bold fashion ideas to life — digitally.
+      </p>
+      <p>
+        From front-end development and branding to exploring cybersecurity, I love turning ideas into real experiences. 
+        StyleNew started as a college dream — now it’s a voice for style, confidence, and originality.
+      </p>
     </div>
+  </div>
+</div>
+
+
+      <div className="connect">
+        <h3>Connect with Us</h3>
+        <div className="social-icons">
+          <Link to="https://www.instagram.com/hi_itz_snehaa" target="_blank" rel="noreferrer">
+            <img src={instagram_icon} alt="Instagram" />
+          </Link>
+          <Link to="https://in.pinterest.com/snehasantra123fg/">
+            <img src={pinterest_icon} alt="Pinterest" />
+          </Link>
+          <Link to="https://wa.me/918100851911" target="_blank" rel="noreferrer">
+            <img src={whatsapp_icon} alt="WhatsApp" />
+          </Link>
+          <Link to="https://www.facebook.com/sneha.santra.104825" target="_blank" rel="noreferrer">
+            <img src={facebook_icon} alt="Facebook" />
+          </Link>
+          <Link to="https://www.linkedin.com/in/sneha-santra-07279a301?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bl4aIqceOTZ2EHCvfmDhSbA%3D%3D" target="_blank" rel="noreferrer">
+            <img src={linkedin_icon} alt="Linkedin" />
+          </Link>
+          <Link to="https://web.telegram.org/k/" target="_blank" rel="noreferrer">
+            <img src={telegram_icon} alt="Telegram" />
+          </Link>
+          <Link to="https://snehasantra123fg@gmail.com
+" target="_blank" rel="noreferrer">
+            <img src={email_icon} alt="Email" />
+          </Link>
+          
+        </div>
+      </div>
+    </section>
   );
 };
 

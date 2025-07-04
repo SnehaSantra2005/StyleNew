@@ -1,156 +1,269 @@
-.offers {
-    margin: 100px auto;
-    width: 65%;
+.offers-content {
     display: flex;
+    gap: 30px;
+    justify-content: center;
     flex-wrap: wrap;
+    padding: 40px;
+
+}
+
+.offers-heading {
+    text-align: center;
+    font-size: 42px;
+    font-weight: 800;
+    color: #d63384;
+    /* Glam pink */
+    margin-bottom: 40px;
+    font-family: 'Segoe UI', sans-serif;
+    animation: fadeInDown 0.8s ease-out;
+    position: relative;
+}
+
+/* Optional underline effect */
+.offers-heading::after {
+    content: '';
+    width: 100px;
+    height: 4px;
+    background: #d63384;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Base box style */
+.offer-box {
+    width: 250px;
+    height: 280px;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.offer-box:hover,
+.small-box:hover,
+.grid-small-box:hover {
+    transform: translateY(-8px);
+    transition: transform 0.3s ease;
+}
+
+/* First box with two vertical boxes */
+.double-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: transparent;
+    box-shadow: none;
+    height: 280px;
+    padding: 0;
+}
+
+.small-box {
+    flex: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.small-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Third box with grid (2x2) */
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background: transparent;
+    box-shadow: none;
+    height: 280px;
+}
+
+.grid-small-box {
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.grid-small-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Regular image */
+.offer-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+.with-text {
+    display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0px 8%;
-    margin-bottom: 150px;
-    background: linear-gradient(180deg, #f69c4d 0%, #e1ffea22 60%);
-    ;
+    gap: 15px;
+    padding: 10px;
 }
 
-.offers-left h1 {
-    color: #171717;
-    font-size: 60px;
-    font-weight: 600;
+.with-text img {
+    width: 55%;
+    height: 80%;
+    border-radius: 12px;
+    object-fit: cover;
+
 }
 
-.offers-left p {
-    color: #171717;
+.box-text {
+    flex: 1;
+    font-family: sans-serif;
+}
+
+.box-text h3 {
     font-size: 16px;
     font-weight: 600;
+    margin: 0 0 5px;
+    color: #171717;
 }
 
-.offers-left button {
-    width: 200px;
-    height: 50px;
-    border-radius: 35px;
-    background: #ff4141;
-    border: none;
-    color: white;
-    font-size: 16px;
-    font-weight: 500;
-    margin-top: 30px;
-    cursor: pointer;
+
+
+
+
+
+
+
+/* Entrance animation keyframes */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.offers-right img {
-    width: 575px;
-    padding-top: 20px;
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-/* ----- media query----- */
-/*
-@media(max-width:1280px) {
-    .offers-right img {
-        width: 300px;
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
     }
 
-    .offers-left h1 {
-        font-size: 40px;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Animation classes for different boxes */
+.animate-left {
+    animation: fadeInLeft 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+.animate-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+}
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .offers-content {
+        padding: 20px;
+        gap: 20px;
     }
 
-    .offers-left p {
-        font-size: 14px;
+    .offers-heading {
+        font-size: 32px;
+        margin-bottom: 20px;
     }
 
-    .offers-left button {
+    .offer-box {
         width: 200px;
-        height: 50px;
-
-        font-size: 18px;
-        margin-top: 25px;
+        height: 240px;
     }
-}
 
-@media(max-width:1024px) {
-    .offers-right img {
-        width: 200px;
+    .double-box {
+        height: auto;
     }
-}
 
-@media(max-width:800px) {
-    .offers-right {
+    .small-box {
+        height: 120px;
+        height: 120px;
+    }
+
+    .grid-box {
         display: none;
     }
 
-    .offers {
-        padding: 50px 8%;
+    .grid-small-box {
+        height: 120px;
     }
-}*/
-.trendy {
-    text-align: center;
+    
 
+.box-text {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  padding-left: 10px;
 }
 
-.trendy h1 {
-    text-align: center;
-    color: #171717;
-    font-size: 40px;
-    font-weight: 600;
+.box-text h3 {
+  font-size: 10px;
+  font-weight: 600;
+  margin: 0;
+  color: #171717;
+  line-height: 1.4;
 }
-
-.trendy hr {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    max-width: 1280px;
-    margin: auto;
-    width: 150px;
-    height: 4px;
-    border-radius: 10px;
-    background: #252525;
-
-}
-
-.section {
-    display: flex;
-    flex-direction: row;
-    margin-top: 50px;
-    margin-left: 150px;
-    margin-bottom: 90px;
-    background: white;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-    padding: 50px;
-    border-radius: 30px;
-    width: 75%;
-
-}
-
-.section1 {
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-
-    gap: 20px;
-}
-
-
-
-.lipstick {
-    display: flex;
-    flex-direction: column;
-    width: 270px;
-    height: 350px;
-}
-
-.lipstickgirl {
-    display: flex;
-    width: 270px;
-    height: 350px;
-}
-
-.lipsticshade {
-    display: flex;
-    width: 270px;
-    height: 350px;
-}
-
-.lipsticvit {
-    display: flex;
-    width: 270px;
-    height: 350px;
+    
 }
