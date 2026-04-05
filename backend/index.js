@@ -282,5 +282,9 @@ app.get("/category/:categoryName", async (req, res) => {
 });
 
 
+app.use(cors({
+  origin: "https://stylenew-frontend2.onrender.com/",
+  credentials: true
+}));
 
 
