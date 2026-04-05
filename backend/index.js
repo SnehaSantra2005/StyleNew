@@ -6,7 +6,6 @@ const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
 const port = process.env.PORT || 5000;
-const cors = require("cors");
 
 // Database Connection With MongoDB
 mongoose.connect("mongodb+srv://Sneha:nxfliZ6KkZJ2pdE7@p5ecommerce.y52da16.mongodb.net/");
