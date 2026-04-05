@@ -283,8 +283,10 @@ app.get("/category/:categoryName", async (req, res) => {
 
 
 app.use(cors({
-  origin: "https://stylenew-frontend2.onrender.com/",
-  credentials: true
+  origin: [
+    "http://localhost:3000",
+    "https://your-frontend-name.onrender.com"
+  ],
+  allowedHeaders: ["Content-Type", "auth-token"],
 }));
-
 
