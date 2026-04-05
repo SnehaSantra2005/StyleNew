@@ -6,7 +6,6 @@ const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
 const port = process.env.PORT || 5000;
-require("dotenv").config();
 
 app.use(express.json());
 app.use(cors());
@@ -99,7 +98,7 @@ app.post('/login', async (req, res) => {
       }
       success = true;
       console.log(user.id);
-      const token = jwt.sign(data, process.env.JWT_SECRET);
+      const token = jwt.sign(data, 'secret_ecom');
       res.json({ success, token });
     }
     else {
@@ -137,7 +136,7 @@ app.post('/signup', async (req, res) => {
     }
   }
 
-  const token = jwt.verify(token, process.env.JWT_SECRET);
+  const token = jwt.sign(data, 'secret_ecom');
   success = true;
   res.json({ success, token })
 })
