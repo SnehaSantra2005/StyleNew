@@ -14,16 +14,6 @@ mongoose.connect("mongodb+srv://Sneha:nxfliZ6KkZJ2pdE7@p5ecommerce.y52da16.mongo
 // password should not contain '@' special character
 
 
-
-app.use(express.json());
-
-app.get("/", (req, res) => {
-  res.send("API Running");
-});
-
-app.listen(5000, () => console.log("Server running"));
-
-
 //Image Storage Engine 
 const storage = multer.diskStorage({
   destination: './upload/images',
@@ -287,12 +277,6 @@ app.get("/category/:categoryName", async (req, res) => {
   }
 });
 
-app.use(
-  cors({
-    origin: "https://stylenew-frontend2.onrender.com",
-    credentials: true,
-  })
-);
 
 
 
