@@ -6,9 +6,7 @@ const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
 const port = process.env.PORT || 5000;
-
-app.use(express.json());
-app.use(cors());
+const cors = require("cors");
 
 // Database Connection With MongoDB
 mongoose.connect("mongodb+srv://Sneha:nxfliZ6KkZJ2pdE7@p5ecommerce.y52da16.mongodb.net/");
@@ -279,6 +277,14 @@ app.get("/category/:categoryName", async (req, res) => {
     res.status(500).json({ message: "Internal Server Error" });
   }
 });
+
+app.use(
+  cors({
+    origin: "https://stylenew-frontend2.onrender.com",
+    credentials: true,
+  })
+);
+
 
 
 
