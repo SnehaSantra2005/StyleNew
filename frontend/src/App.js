@@ -14,7 +14,7 @@ import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import CategoryShowcase from './Components/CategoryShowcase/CategoryShowcase'; // Import category showcase component
 import CategoryPage from './Pages/CategoryPage'; // Import category page
-export const backend_url = 'http://localhost:5000';
+export const backend_url = 'https://stylenew-backend.onrender.com';
 export const currency = '₹';
 
 function App() {
