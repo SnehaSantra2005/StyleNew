@@ -3,7 +3,7 @@ import Footer from "./Components/Footer/Footer";
 import Navbar from "./Components/Navbar/Navbar";
 import Admin from "./Pages/Admin";
 
-export const backend_url = 'http://localhost:5000';
+export const backend_url = 'https://stylenew-backend.onrender.com';
 export const currency = '₹';
 
 function App() {
