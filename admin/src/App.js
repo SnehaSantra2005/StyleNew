@@ -4,6 +4,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Admin from "./Pages/Admin";
 
 export const backend_url = 'https://stylenew-backend.onrender.com';
+export const frontend_url = 'https://stylenew-frontend2.onrender.com';
 export const currency = '₹';
 
 function App() {
